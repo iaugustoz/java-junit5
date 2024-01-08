@@ -22,3 +22,7 @@ W
 Q.idea/sonarlint/securityhotspotstore/a/9/a94874240b6f5a8ced38b4fc4992b88b488ab079,4\e\4e0da3865787fc0fc5c62ead9a328e2ced78f16c
 Å
 Q.idea/sonarlint/securityhotspotstore/c/b/cbee834ddda6f79fedcb6eeb15f3be054ed71b16,5\d\5d5feb26146b718c757201bf95e69a8715c71d41
+b
+2src/test/java/br/com/iaugusto/domain/UserTest.java,4\f\4fafcad3b260fd02df45c7502de4efa0d4c4d99a
+|
+Lsrc/test/java/br/com/iaugusto/domain/exceptions/ValidationExceptionTest.java,c\5\c54d9882e7d0fb4110bf81f79f931b4a8ff60f63
