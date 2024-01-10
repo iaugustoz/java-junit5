@@ -26,3 +26,7 @@ b
 2src/test/java/br/com/iaugusto/domain/UserTest.java,4\f\4fafcad3b260fd02df45c7502de4efa0d4c4d99a
 |
 Lsrc/test/java/br/com/iaugusto/domain/exceptions/ValidationExceptionTest.java,c\5\c54d9882e7d0fb4110bf81f79f931b4a8ff60f63
+C
+UnitTest-JUnit5.iml,4\2\42b943b4716b0d9e1f4fb1dfe0b1d55a195ac2f4
+n
+>src/test/java/br/com/iaugusto/domain/builders/UserBuilder.java,d\3\d3841223a7bafd95072594aef2c3a7f1c5ad1e41
