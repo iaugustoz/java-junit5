@@ -10,15 +10,15 @@ public class User {
 
     public User(Long id, String name, String email, String passcword) {
         if (name == null) {
-            throw new ValidationException("O campo name é obrigatório!");
+            throw new ValidationException("O campo name é obrigatório");
         }
 
         if (email == null) {
-            throw new ValidationException("O campo e-mail é obrigatório!");
+            throw new ValidationException("O campo e-mail é obrigatório");
         }
 
         if (passcword == null) {
-            throw new ValidationException("O campo password é obrigatório!");
+            throw new ValidationException("O campo password é obrigatório");
         }
 
         this.id = id;
