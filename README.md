@@ -16,7 +16,9 @@ Projeto em andamento.
 
 ### Dependências
 
-- [JaCoCo](https://mvnrepository.com/artifact/org.jacoco/jacoco-maven-plugin/0.8.10).
+- [JaCoCo](https://mvnrepository.com/artifact/org.jacoco/jacoco-maven-plugin/0.8.10);
+- [Lombok](https://mvnrepository.com/artifact/org.projectlombok/lombok);
+- [Slf4j](https://mvnrepository.com/artifact/org.slf4j/slf4j-api).
 
 ## Instalando
 
