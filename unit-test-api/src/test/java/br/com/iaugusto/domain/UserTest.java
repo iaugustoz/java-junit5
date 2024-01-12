@@ -1,13 +1,10 @@
 package br.com.iaugusto.domain;
 
-import br.com.iaugusto.domain.builders.UserBuilder;
 import br.com.iaugusto.domain.exceptions.ValidationException;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.CsvSource;
-import org.junit.jupiter.params.provider.MethodSource;
 
 import static br.com.iaugusto.domain.builders.UserBuilder.umUsuario;
 import static org.junit.jupiter.api.Assertions.*;
