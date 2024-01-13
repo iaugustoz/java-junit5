@@ -4,6 +4,7 @@ import br.com.iaugusto.domain.exceptions.ValidationException;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.CsvSource;
 
 import static br.com.iaugusto.domain.builders.UserBuilder.umUsuario;
@@ -28,11 +29,11 @@ class UserTest {
 
     @ParameterizedTest(name = "[{index}] - {4}")
     @DisplayName("Deve validar campos obrigatórios")
-    @CsvSource(value = {
-            "1, NULL, user@mail.com, 123456789, O campo name é obrigatório",
-            "2, Usuário Válido, NULL, 12345678, O campo e-mail é obrigatório",
-            "3, Usuário, user3@mail.com, NULL,O campo password é obrigatório"
-    }, nullValues = "NULL")
+    @CsvFileSource(
+            files = "src\\test\\resources\\camposObrigatoriosUsuario.csv",
+            nullValues = "NULL",
+            numLinesToSkip = 1
+    )
     void mustValidateMandatoryFields(Long id, String nome, String email, String senha, String expected) {
         ValidationException exception = assertThrows(ValidationException.class,
                 () -> umUsuario().comId(id).comNome(nome).comEmail(email).comSenha(senha).agora()
