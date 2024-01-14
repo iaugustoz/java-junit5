@@ -2,6 +2,8 @@ package br.com.iaugusto.domain;
 
 import br.com.iaugusto.domain.exceptions.ValidationException;
 
+import java.util.Objects;
+
 public class User {
     private Long id;
     private String name;
@@ -41,5 +43,18 @@ public class User {
 
     public String getPasscword() {
         return passcword;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return Objects.equals(name, user.name) && Objects.equals(email, user.email) && Objects.equals(passcword, user.passcword);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, email, passcword);
     }
 }
