@@ -1,5 +1,7 @@
 package br.com.iaugusto.domain.builders;
 
+import br.com.iaugusto.domain.Account;
+
 import static java.lang.String.format;
 
 import java.lang.reflect.Field;
@@ -136,6 +138,6 @@ public class BuilderMaster {
 
     public static void main(String[] args) {
         BuilderMaster master = new BuilderMaster();
-        master.gerarCodigoClasse(null);
+        master.gerarCodigoClasse(Account.class);
     }
 }
