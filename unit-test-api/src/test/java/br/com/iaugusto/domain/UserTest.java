@@ -34,10 +34,10 @@ class UserTest {
             nullValues = "NULL",
             numLinesToSkip = 1
     )
-    void mustValidateMandatoryFields(Long id, String nome, String email, String senha, String expected) {
+    void mustValidateMandatoryFields(Long id, String nome, String email, String senha, String expectedMessage) {
         ValidationException exception = assertThrows(ValidationException.class,
                 () -> umUsuario().comId(id).comNome(nome).comEmail(email).comSenha(senha).agora()
         );
-        assertEquals(expected, exception.getMessage());
+        assertEquals(expectedMessage, exception.getMessage());
     }
 }

@@ -30,3 +30,9 @@ n
 >src/test/java/br/com/iaugusto/domain/builders/UserBuilder.java,d\3\d3841223a7bafd95072594aef2c3a7f1c5ad1e41
 p
 @src/test/java/br/com/iaugusto/domain/builders/BuilderMaster.java,4\a\4a1046ba82db4cfb18e251b581d49b30e2849a71
+a
+1src/main/java/br/com/iaugusto/domain/Account.java,f\2\f29ac75163c18bfb6702c752ff32d7adddd239a4
+q
+Asrc/test/java/br/com/iaugusto/domain/builders/AccountBuilder.java,6\6\667c73d2a444b24884bbc5f297d378e3d0276c1d
+e
+5src/test/java/br/com/iaugusto/domain/AccountTest.java,b\0\b08b43a7390f5673124318f2fee2680d494da18d
