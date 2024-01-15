@@ -36,3 +36,7 @@ q
 Asrc/test/java/br/com/iaugusto/domain/builders/AccountBuilder.java,6\6\667c73d2a444b24884bbc5f297d378e3d0276c1d
 e
 5src/test/java/br/com/iaugusto/domain/AccountTest.java,b\0\b08b43a7390f5673124318f2fee2680d494da18d
+f
+6src/main/java/br/com/iaugusto/service/UserService.java,2\9\29a36c0c335933534eef52a58e1d7aeacb8e96d7
+v
+Fsrc/main/java/br/com/iaugusto/service/repositories/UserRepository.java,a\6\a6b166a3c8be1a37310a24c83bf5914cdc97def3

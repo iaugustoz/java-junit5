@@ -6,7 +6,7 @@
 
     <groupId>br.com.iaugusto</groupId>
     <artifactId>UnitTest-JUnit5</artifactId>
-    <version>1.6</version>
+    <version>1.7</version>
 
     <properties>
         <junit.version>5.10.1</junit.version>
