@@ -40,3 +40,7 @@ f
 6src/main/java/br/com/iaugusto/service/UserService.java,2\9\29a36c0c335933534eef52a58e1d7aeacb8e96d7
 v
 Fsrc/main/java/br/com/iaugusto/service/repositories/UserRepository.java,a\6\a6b166a3c8be1a37310a24c83bf5914cdc97def3
+m
+=src/main/java/br/com/iaugusto/infra/UserMemoryRepository.java,d\0\d021ad45497a116f2efeb5983ac8402cde80f716
+
+Osrc/test/java/br/com/iaugusto/infra/UserServiceComUserMemoryRepositoryTest.java,f\b\fb6145ad2bced633e742b003c13cc9f78ea712d4
