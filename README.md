@@ -16,6 +16,9 @@ Projeto em andamento.
 
 ### Dependências
 
+- [JUnit Jupiter](https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api);
+- [JUnit Jupiter Params](https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-params);
+- [Mockito](https://mvnrepository.com/artifact/org.mockito/mockito-core);
 - [JaCoCo](https://mvnrepository.com/artifact/org.jacoco/jacoco-maven-plugin/0.8.10);
 - [Lombok](https://mvnrepository.com/artifact/org.projectlombok/lombok);
 - [Slf4j](https://mvnrepository.com/artifact/org.slf4j/slf4j-api).
