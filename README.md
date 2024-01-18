@@ -2,7 +2,7 @@
 
 ## Descrição
 
-Descrição em andamento.
+Sempre ouvi falar sobre os temidos 'Testes Unitários', no entanto, nunca havia dedicado tempo para aprendê-los. Neste repositório, estou explorando alguns conceitos com o objetivo de compreender e, eventualmente, dominar a prática de testes.
 
 ## Status do projeto
 
@@ -13,6 +13,8 @@ Projeto em andamento.
 ### Linguagens e Banco de Dados
 
 - Java (v17.0.5 ou superior).
+- JUnit Jupiter (JUnit5);
+- Mockito.
 
 ### Dependências
 
