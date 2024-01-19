@@ -46,3 +46,7 @@ m
 Osrc/test/java/br/com/iaugusto/infra/UserServiceComUserMemoryRepositoryTest.java,f\b\fb6145ad2bced633e742b003c13cc9f78ea712d4
 j
 :src/test/java/br/com/iaugusto/service/UserServiceTest.java,8\1\814131d59a493578f9519ad4f5e484a6fdcdf722
+i
+9src/main/java/br/com/iaugusto/service/AccountService.java,a\3\a3e44c4e2598b6755763b4c58ebc6fed8d08f02b
+y
+Isrc/main/java/br/com/iaugusto/service/repositories/AccountRepository.java,8\e\8ea37b76fce854e848b8262a56fbb89e11a00f85
