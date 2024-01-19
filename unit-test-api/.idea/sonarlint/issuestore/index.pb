@@ -44,3 +44,5 @@ m
 =src/main/java/br/com/iaugusto/infra/UserMemoryRepository.java,d\0\d021ad45497a116f2efeb5983ac8402cde80f716
 
 Osrc/test/java/br/com/iaugusto/infra/UserServiceComUserMemoryRepositoryTest.java,f\b\fb6145ad2bced633e742b003c13cc9f78ea712d4
+j
+:src/test/java/br/com/iaugusto/service/UserServiceTest.java,8\1\814131d59a493578f9519ad4f5e484a6fdcdf722

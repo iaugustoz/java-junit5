@@ -2,7 +2,7 @@
 
 ## Descrição
 
-Descrição em andamento.
+Sempre ouvi falar sobre os temidos 'Testes Unitários', no entanto, nunca havia dedicado tempo para aprendê-los. Neste repositório, estou explorando alguns conceitos com o objetivo de compreender e, eventualmente, dominar a prática de testes.
 
 ## Status do projeto
 
@@ -13,9 +13,14 @@ Projeto em andamento.
 ### Linguagens e Banco de Dados
 
 - Java (v17.0.5 ou superior).
+- JUnit Jupiter (JUnit5);
+- Mockito.
 
 ### Dependências
 
+- [JUnit Jupiter](https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api);
+- [JUnit Jupiter Params](https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-params);
+- [Mockito](https://mvnrepository.com/artifact/org.mockito/mockito-core);
 - [JaCoCo](https://mvnrepository.com/artifact/org.jacoco/jacoco-maven-plugin/0.8.10);
 - [Lombok](https://mvnrepository.com/artifact/org.projectlombok/lombok);
 - [Slf4j](https://mvnrepository.com/artifact/org.slf4j/slf4j-api).
