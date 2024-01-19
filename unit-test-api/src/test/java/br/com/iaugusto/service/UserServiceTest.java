@@ -1,6 +1,7 @@
 package br.com.iaugusto.service;
 
 import br.com.iaugusto.domain.User;
+import br.com.iaugusto.domain.exceptions.ValidationException;
 import br.com.iaugusto.service.repositories.UserRepository;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -15,8 +16,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import java.util.Optional;
 
 import static br.com.iaugusto.domain.builders.UserBuilder.umUsuario;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
@@ -47,5 +47,19 @@ public class UserServiceTest {
 
         assertNotNull(savedUser.getId());
         verify(repository).getUserByEmail(userToSave.getEmail());
+    }
+
+    @Test
+    @DisplayName("Deve rejeitar usuário existente")
+    void must() {
+        User userToSave = umUsuario().comId(null).agora();
+        when(repository.getUserByEmail(userToSave.getEmail()))
+                .thenReturn(Optional.of(umUsuario().agora()));
+
+        ValidationException exception = assertThrows(ValidationException.class,
+                () -> service.save(userToSave)
+        );
+        assertTrue(exception.getMessage().endsWith("já cadastrado!"));
+        verify(repository, never()).save(userToSave);
     }
 }
