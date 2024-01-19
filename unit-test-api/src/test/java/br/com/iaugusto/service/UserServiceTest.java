@@ -38,7 +38,7 @@ public class UserServiceTest {
 
     @Test
     @DisplayName("Deve salvar o usuário com sucesso")
-    void mustSaveUser() {
+    void mustSaveUserWithSuccessfully() {
         User userToSave = umUsuario().comId(null).agora();
 
         when(repository.save(userToSave)).thenReturn(umUsuario().agora());
