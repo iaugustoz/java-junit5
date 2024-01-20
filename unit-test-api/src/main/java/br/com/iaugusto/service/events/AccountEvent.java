@@ -9,5 +9,5 @@ public interface AccountEvent {
         DELETED
     }
 
-    void dispatch(Account account, EventType type);
+    void dispatch(Account account, EventType type) throws Exception;
 }

@@ -9,4 +9,6 @@ public interface AccountRepository {
     Account save(Account account);
 
     List<Account> getAccountByUser(Long userId);
+
+    void delete(Account account);
 }
