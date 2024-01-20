@@ -52,3 +52,5 @@ y
 Isrc/main/java/br/com/iaugusto/service/repositories/AccountRepository.java,8\e\8ea37b76fce854e848b8262a56fbb89e11a00f85
 m
 =src/test/java/br/com/iaugusto/service/AccountServiceTest.java,7\3\737776850984af2e9be4edbaeefe7bafea46c734
+n
+>src/main/java/br/com/iaugusto/service/events/AccountEvent.java,6\4\6427d35465a71a868feb5689de28a4023bd77dbf

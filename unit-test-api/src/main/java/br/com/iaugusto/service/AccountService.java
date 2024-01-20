@@ -2,6 +2,8 @@ package br.com.iaugusto.service;
 
 import br.com.iaugusto.domain.Account;
 import br.com.iaugusto.domain.exceptions.ValidationException;
+import br.com.iaugusto.service.events.AccountEvent;
+import br.com.iaugusto.service.events.AccountEvent.EventType;
 import br.com.iaugusto.service.repositories.AccountRepository;
 
 import java.util.List;
@@ -9,8 +11,11 @@ import java.util.List;
 public class AccountService {
     private AccountRepository accountRepository;
 
-    public AccountService(AccountRepository accountRepository) {
+    private AccountEvent accountEvent;
+
+    public AccountService(AccountRepository accountRepository, AccountEvent event) {
         this.accountRepository = accountRepository;
+        this.accountEvent = event;
     }
 
     public Account save(Account account) {
@@ -20,6 +25,8 @@ public class AccountService {
                 throw new ValidationException("Usuário já possui uma conta com este nome!");
             }
         });
-        return accountRepository.save(account);
+        Account persistedAccount = accountRepository.save(account);
+        accountEvent.dispatch(persistedAccount, EventType.CREATED);
+        return persistedAccount;
     }
 }
