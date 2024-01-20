@@ -1,7 +1,10 @@
 package br.com.iaugusto.service;
 
 import br.com.iaugusto.domain.Account;
+import br.com.iaugusto.domain.exceptions.ValidationException;
 import br.com.iaugusto.service.repositories.AccountRepository;
+
+import java.util.List;
 
 public class AccountService {
     private AccountRepository accountRepository;
@@ -11,6 +14,12 @@ public class AccountService {
     }
 
     public Account save(Account account) {
+        List<Account> accounts = accountRepository.getAccountByUser(account.getUser().getId());
+        accounts.stream().forEach(existingAccount -> {
+            if (account.getName().equalsIgnoreCase(existingAccount.getName())) {
+                throw new ValidationException("Usuário já possui uma conta com este nome!");
+            }
+        });
         return accountRepository.save(account);
     }
 }
