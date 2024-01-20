@@ -50,5 +50,20 @@ class AccountServiceTest {
         Account savedAccount = accountService.save(accountToSave);
         assertNotNull(savedAccount.getId());
     }
+
+    @Test
+    @DisplayName("Deve rejeitar conta repetida")
+    void mustRejectRepeatedAccount() {
+        Account accountToSave = umaAccount().comId(null).agora();
+
+        when(accountRepository.getAccountByUser(accountToSave.getUser().getId()))
+                .thenReturn(Arrays.asList(umaAccount().agora()));
+        //when(accountRepository.save(accountToSave)).thenReturn(umaAccount().agora());
+
+        String message = assertThrows(ValidationException.class,
+                () -> accountService.save(accountToSave)
+        ).getMessage();
+        assertEquals("Usuário já possui uma conta com este nome!", message);
+    }
 }
 
