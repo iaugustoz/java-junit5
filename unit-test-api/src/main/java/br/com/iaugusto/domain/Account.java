@@ -1,7 +1,11 @@
 package br.com.iaugusto.domain;
 
 import br.com.iaugusto.domain.exceptions.ValidationException;
+import lombok.Getter;
 
+import java.util.Objects;
+
+@Getter
 public class Account {
     private Long id;
     private String name;
@@ -21,15 +25,16 @@ public class Account {
         this.user = user;
     }
 
-    public long getId() {
-        return id;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Account account = (Account) o;
+        return Objects.equals(id, account.id) && Objects.equals(name, account.name) && Objects.equals(user, account.user);
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public User getUser() {
-        return user;
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, user);
     }
 }
