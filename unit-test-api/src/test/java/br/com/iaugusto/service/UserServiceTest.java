@@ -51,7 +51,7 @@ public class UserServiceTest {
 
     @Test
     @DisplayName("Deve rejeitar usuário existente")
-    void must() {
+    void mustRejectExistingUser() {
         User userToSave = umUsuario().comId(null).agora();
         when(repository.getUserByEmail(userToSave.getEmail()))
                 .thenReturn(Optional.of(umUsuario().agora()));

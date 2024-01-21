@@ -1,11 +1,11 @@
 package br.com.iaugusto.domain;
 
 import br.com.iaugusto.domain.exceptions.ValidationException;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 
-import java.util.Objects;
-
 @Getter
+@EqualsAndHashCode
 public class Account {
     private Long id;
     private String name;
@@ -23,18 +23,5 @@ public class Account {
         this.id = id;
         this.name = name;
         this.user = user;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Account account = (Account) o;
-        return Objects.equals(id, account.id) && Objects.equals(name, account.name) && Objects.equals(user, account.user);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, name, user);
     }
 }
