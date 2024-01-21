@@ -1,9 +1,11 @@
 package br.com.iaugusto.domain;
 
 import br.com.iaugusto.domain.exceptions.ValidationException;
+import lombok.Getter;
 
 import java.util.Objects;
 
+@Getter
 public class User {
     private Long id;
     private String name;
@@ -27,22 +29,6 @@ public class User {
         this.name = name;
         this.email = email;
         this.passcword = passcword;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public String getPasscword() {
-        return passcword;
     }
 
     @Override
