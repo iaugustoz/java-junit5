@@ -54,3 +54,13 @@ m
 =src/test/java/br/com/iaugusto/service/AccountServiceTest.java,7\3\737776850984af2e9be4edbaeefe7bafea46c734
 n
 >src/main/java/br/com/iaugusto/service/events/AccountEvent.java,6\4\6427d35465a71a868feb5689de28a4023bd77dbf
+e
+5src/main/java/br/com/iaugusto/domain/Transaction.java,a\b\abfc0c84e41c74e7224138ff0ba1a4cef97e3807
+m
+=src/main/java/br/com/iaugusto/service/TransactionService.java,0\f\0f52b3fb4fc10beee0fedc5b31b90376db200959
+v
+Fsrc/main/java/br/com/iaugusto/service/repositories/TransactionDao.java,e\a\ea4339ecb22ea9729c45e9d5b42cc7ecb1b8c871
+t
+Dsrc/test/java/br/com/iaugusto/domain/builders/BuilderMasterPojo.java,5\1\515b44efb93c92b52aaf32f157c87e368d2760cb
+u
+Esrc/test/java/br/com/iaugusto/domain/builders/TransactionBuilder.java,f\d\fd857e64eddca0b12d93dcc9c724c8272f5adfef
