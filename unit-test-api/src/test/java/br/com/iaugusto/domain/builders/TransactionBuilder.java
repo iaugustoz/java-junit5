@@ -1,20 +1,20 @@
 package br.com.iaugusto.domain.builders;
 
-import java.lang.Long;
-import java.util.Arrays;
-import java.time.LocalDate;
-import java.lang.Boolean;
-import java.lang.Double;
-import java.lang.String;
 import br.com.iaugusto.domain.Account;
 import br.com.iaugusto.domain.Transaction;
+
+import java.time.LocalDate;
+
+import static br.com.iaugusto.domain.builders.AccountBuilder.umaAccount;
 
 
 public class TransactionBuilder {
     private Transaction elemento;
-    private TransactionBuilder(){}
 
-    public static TransactionBuilder umTransaction() {
+    private TransactionBuilder() {
+    }
+
+    public static TransactionBuilder umaTransaction() {
         TransactionBuilder builder = new TransactionBuilder();
         inicializarDadosPadroes(builder);
         return builder;
@@ -25,11 +25,11 @@ public class TransactionBuilder {
         Transaction elemento = builder.elemento;
 
 
-        elemento.setId(0L);
-        elemento.setDescription("");
-        elemento.setValue(0.0);
-        elemento.setAccount(null);
-        elemento.setDate(null);
+        elemento.setId(1L);
+        elemento.setDescription("Transação Válida");
+        elemento.setValue(10.0);
+        elemento.setAccount(umaAccount().agora());
+        elemento.setDate(LocalDate.now());
         elemento.setStatus(false);
     }
 

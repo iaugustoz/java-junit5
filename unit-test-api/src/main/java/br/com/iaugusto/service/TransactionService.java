@@ -21,7 +21,7 @@ public class TransactionService {
         }
 
         if (transaction.getAccount() == null) {
-            throw new ValidationException("Conta inexistente");
+            throw new ValidationException("Conta inexistente!");
         }
 
         if (transaction.getStatus() == null) {

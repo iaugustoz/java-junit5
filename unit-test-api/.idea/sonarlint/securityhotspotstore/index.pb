@@ -64,3 +64,5 @@ t
 Dsrc/test/java/br/com/iaugusto/domain/builders/BuilderMasterPojo.java,5\1\515b44efb93c92b52aaf32f157c87e368d2760cb
 u
 Esrc/test/java/br/com/iaugusto/domain/builders/TransactionBuilder.java,f\d\fd857e64eddca0b12d93dcc9c724c8272f5adfef
+q
+Asrc/test/java/br/com/iaugusto/service/TransactionServiceTest.java,c\5\c530ea0d22546aad0f39ce8b2ebd19774c066c15

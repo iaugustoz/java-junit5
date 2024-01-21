@@ -63,11 +63,11 @@ class AccountServiceTest {
 
         when(repository.getAccountByUser(accountToSave.getUser().getId()))
                 .thenReturn(Arrays.asList(umaAccount().agora()));
-        //when(accountRepository.save(accountToSave)).thenReturn(umaAccount().agora());
 
         String message = assertThrows(ValidationException.class,
                 () -> service.save(accountToSave)
         ).getMessage();
+
         assertEquals("Usuário já possui uma conta com este nome!", message);
     }
 
