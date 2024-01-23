@@ -3,7 +3,9 @@ package br.com.iaugusto.service;
 import br.com.iaugusto.domain.Account;
 import br.com.iaugusto.domain.Transaction;
 import br.com.iaugusto.domain.exceptions.ValidationException;
+import br.com.iaugusto.service.events.ClockService;
 import br.com.iaugusto.service.repositories.TransactionDao;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -15,6 +17,7 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.stream.Stream;
 
 import static br.com.iaugusto.domain.builders.AccountBuilder.umaAccount;
@@ -29,6 +32,15 @@ public class TransactionServiceTest {
 
     @Mock
     private TransactionDao dao;
+
+    @Mock
+    private ClockService clock;
+
+    @BeforeEach
+    void setUp() {
+        LocalDateTime desiredDate = LocalDateTime.of(2023, 1, 28, 10, 0, 0);
+        when(clock.getCurrentTime()).thenReturn(desiredDate);
+    }
 
     @Test
     @DisplayName("Deve salvar uma transação válida")

@@ -2,12 +2,20 @@ package br.com.iaugusto.service;
 
 import br.com.iaugusto.domain.Transaction;
 import br.com.iaugusto.domain.exceptions.ValidationException;
+import br.com.iaugusto.service.events.ClockService;
 import br.com.iaugusto.service.repositories.TransactionDao;
+
+import java.time.LocalDateTime;
 
 public class TransactionService {
     private TransactionDao dao;
+    private ClockService clock;
 
     public Transaction saveTransaction(Transaction transaction) {
+        if (clock.getCurrentTime().getHour() > 19) {
+            throw new RuntimeException("O horário ultrapassa o limite permitido. Tente amanhã.");
+        }
+
         if (transaction.getDescription() == null) {
             throw new ValidationException("Descrição inexistente!");
         }

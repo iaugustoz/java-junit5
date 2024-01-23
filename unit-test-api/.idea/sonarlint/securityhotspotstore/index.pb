@@ -66,3 +66,5 @@ u
 Esrc/test/java/br/com/iaugusto/domain/builders/TransactionBuilder.java,f\d\fd857e64eddca0b12d93dcc9c724c8272f5adfef
 q
 Asrc/test/java/br/com/iaugusto/service/TransactionServiceTest.java,c\5\c530ea0d22546aad0f39ce8b2ebd19774c066c15
+n
+>src/main/java/br/com/iaugusto/service/events/ClockService.java,4\6\469a0916f5eb1fd4f573e468b2c2fc9b0cee4d54
