@@ -12,6 +12,8 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
+import org.mockito.ArgumentCaptor;
+import org.mockito.Captor;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
@@ -23,6 +25,7 @@ import java.util.stream.Stream;
 import static br.com.iaugusto.domain.builders.AccountBuilder.umaAccount;
 import static br.com.iaugusto.domain.builders.TransactionBuilder.umaTransaction;
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
@@ -36,10 +39,12 @@ public class TransactionServiceTest {
     @Mock
     private ClockService clock;
 
+    @Captor
+    private ArgumentCaptor<Transaction> captor;
+
     @BeforeEach
     void setUp() {
-        LocalDateTime desiredDate = LocalDateTime.of(2023, 1, 28, 10, 0, 0);
-        when(clock.getCurrentTime()).thenReturn(desiredDate);
+        when(clock.getCurrentTime()).thenReturn(LocalDateTime.of(2023, 1, 28, 10, 0, 0));
     }
 
     @Test
@@ -70,6 +75,28 @@ public class TransactionServiceTest {
         );
 
         assertEquals(expectedMessage, exception.getMessage());
+    }
+
+    @Test
+    @DisplayName("Deve rejeitar uma transação que exceda o horário")
+    void mustRejectTransactionThatExceedsTime() {
+        when(clock.getCurrentTime()).thenReturn(LocalDateTime.of(2023, 1, 28, 23, 0, 0));
+
+        String exceptionMessage = assertThrows(ValidationException.class,
+                () -> service.saveTransaction(umaTransaction().agora())
+        ).getMessage();
+        assertEquals("O horário ultrapassa o limite permitido. Tente amanhã.",  exceptionMessage);
+    }
+
+    @Test
+    @DisplayName("Deve salvar transação pendente por padrão")
+    void mustSavePendingTransactionByDefault() {
+        Transaction transactionToSave = umaTransaction().comStatus(null).agora();
+        service.saveTransaction(transactionToSave);
+
+        verify(dao).salvar(captor.capture());
+        Transaction transactioValided = captor.getValue();
+        assertFalse(transactioValided.getStatus());
     }
 
     static Stream<Arguments> dataProvider() {
