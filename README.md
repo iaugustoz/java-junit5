@@ -6,7 +6,7 @@ Sempre ouvi falar sobre os temidos 'Testes Unitários', no entanto, nunca havia 
 
 ## Status do projeto
 
-Projeto em andamento.
+Projeto concluído.
 
 ## Pré-requisitos
 
@@ -30,7 +30,7 @@ Projeto em andamento.
 1. Clone o repositório para o seu ambiente local:
 
 ```
-$ git clone https://github.com/igoraugustobrz/UnitTest-JUnit5
+$ git clone https://github.com/igoraugustobrz/java-junit5
 ```
 
 2. Navegue até o diretório do projeto.
